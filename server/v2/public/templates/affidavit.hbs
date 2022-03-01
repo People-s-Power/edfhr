@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    {{!--
+    <link rel="stylesheet" href="../css/draft.css"> --}}
+    <title>Affidavit in Support</title>
+</head>
+
+<style>
+    html,
+    body {
+        font-size: 12px;
+        margin: 10px;
+
+    }
+
+    h6 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+</style>
+
+<body id="draft" class="text-justify">
+    <div>
+        <div class="top-heading">
+            <div class=" my-3 text-center heading text-uppercase">
+                <h6>
+                    IN THE HIGH COURT OF {{state_arrest}}
+                </h6>
+                <h6>IN THE {{state_arrest}} JUDICIAL DIVISION</h6>
+                <h6>HOLDEN AT {{state_arrest}}</h6>
+            </div>
+            <div class="text-right text-uppercase my-3">
+                SUIT NO:        /FHR/{{year}}
+            </div>
+            <div class="text-justify text-dark text-uppercase">
+                IN THE MATTER OF AN APPLICATION FOR THE ENFORCEMENT OF THE APPLICANT’S
+                FUNDAMENTAL RIGHTS TO RESPECT FOR THE DIGNITY OF HIS PERSON, PERSONAL
+                LIBERTY, RIGHT TO FAIR TRIAL WITHIN A REASONABLE TIME AND FREEDOM OF
+                MOVEMENT.
+            </div>
+            <div class="mt-2 font-weight-bold">BETWEEN</div>
+            <div class="flex justify-content-between text-uppercase">
+                <div>{{name}}</div>
+                <div class="font-weight-bold">APPLICANT</div>
+            </div>
+            <div class="my-2">AND</div>
+            <ol class="text-uppercase">
+                <li>THE ATTORNEY GENERAL, {{state_arrest}}</li>
+                <li>
+                    <Flex>
+                        <div class="flex-1 ">
+                            THE COMMISSIONER OF POLICE, {{state_arrest}}
+                        </div>
+                        <div class="text-uppercase text-bold ">RESPONDENT</div>
+                    </Flex>
+                                     
+                </li>
+            </ol>
+        </div>
+
+        <div className="body">
+            <h6 className="text-center">
+                AFFIDAVIT IN SUPPORT OF THIS APPLICATION
+            </h6>
+            <div>
+                I, {title} {name}, {gender}, adult, {religion}, a {occupation}, now
+                residing at {address}, citizen of the Federal Republic of Nigeria,
+                do make Oauth and state as follows:
+                <ol>
+                    <li>
+                        That I am the {rel} of the Accused/Applicant in this application
+                        by virtue of which I am conversant with the facts leading to the
+                        detention of the applicant at the
+                        {applicant.station}, {applicant.state_arrest} State, Nigeria.
+                    </li>
+                    <li>
+                        That I have the authority and consent of the Accused/Applicant
+                        to depose to this oath.
+                    </li>
+                    <li>
+                        That the Applicant told me in the {applicant.arrested_on} at the
+                        ­­­{applicant.station}, {applicant.state_arrest} State, Nigeria
+                        and I verily believed him.
+                    </li>
+                    <li>
+                        The Applicant was arrested on the {applicant.arrested_on}, by
+                        the Nigeria Police Force {applicant.arrested_at}, in{" "}
+                        {applicant.state_arrest} on same date.
+                    </li>
+                    <li>
+                        All efforts made by me and members of our family to secure the
+                        bail of the Applicant at the station have proved abortive.
+                    </li>
+                    <li>
+                        That since the {applicant.arrested_on}, when the Applicant was
+                        arrested by the Nigerian Police Force till the date of the
+                        filing of this Application, it is more than One Month and the
+                        Applicant has not either been charged or released by the
+                        Nigerian Police Force.
+                    </li>
+                    <li>
+                        That I know as a fact that from the {applicant.arrested_on},
+                        when the Applicant was arrested till date, the Nigeria Police
+                        Force should have concluded investigation, if any fact exist of
+                        any crime at all.
+                    </li>
+                    <li>
+                        That the grant of this application will not prejudice the
+                        respondent as the applicant is in no way involved in the crime
+                        for which he is alleged to have committed.
+                    </li>
+                    <li>
+                        That the Applicant is a responsible citizen of the Federal
+                        Republic of Nigeria.
+                    </li>
+                    <li>
+                        That I know as a fact that, unless this court enforces the
+                        Applicant’s Fundamental Right, the respondent will continue to
+                        detain the Applicant in their unlawful, wrongful, and
+                        unconstitutional detention.
+                    </li>
+                    <li>
+                        That the grant of this application will be in the interest of
+                        justice.
+                    </li>
+                    <li>
+                        That i swear to this Oath solemnly and conscientiously believing
+                        its contents to be true and correct in accordance with the Oath
+                        Act.
+                    </li>
+                </ol>
+            </div>
+            <div className="text-right">
+                <div className="text-center">
+                    <div>____________________________</div>
+                    <h6>DEPONENT</h6>
+                </div>
+            </div>
+            <div>
+                SWORN TO at the High Court Registry, {applicant.state_arrest}
+            </div>
+            <div className="text-center my-3">   BEFORE ME:</div>
+            <div className="text-center mt-5">
+                <div>_________________________________________________________</div>
+                <h6>COMMISSIONER FOR OATHS</h6>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="mt-5">
+                Dated this ____________ day of ______________________
+                {{year}}
+            </div>
+            <div class="d-flex justify-content-end">
+                <div>
+                    <div>G.B. EVANS, ESQ</div>
+                    <div>Evans Dule’s Foundation </div>
+                    <div>Solicitor to the Accused/Applicant</div>
+                    <div>No. 163A Okporo Road Port Harcourt,</div>
+                    <div>Rivers State.</div>
+                    <div>Email: evansb45@yahoo.com</div>
+                    <div> 08107639372</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer-left">
+                    <h6>FOR SERVICE ON:</h6>      
+                    <ol>
+                        <li>
+                            <div>Attorney General, {{state_arrest}},</div>
+                            <div>Ministry of Justice ,</div>
+                            <div>Secretariat</div>
+                        </li>
+                        <li>
+                            <div>Commissioner of Police, {{state_arrest}},</div>
+                            <div>{{state_arrest}} Police Command,</div>
+                        </li>
+                    </ol>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

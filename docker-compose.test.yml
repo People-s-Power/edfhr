@@ -1,0 +1,92 @@
+version: "3"
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs
+    ports:
+      - 8081:8081
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:stable-perl
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - web-root:/var/www/html
+      - ./server/nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    depends_on:
+      - nodejs
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html --email [EMAIL ADDRESS] --agree-tos --no-eff-email --force-renewal -d [DOMAIN]
+
+  strapi:
+    container_name: strapi
+    image: strapi/strapi:3.6-alpine
+    environment:
+      - APP_NAME=strapi-app
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=
+      - DATABASE_PASSWORD=
+      - AUTHENTICATION_DATABASE=strapi
+    ports:
+      - 1337:1337
+    volumes:
+      - strapi-app:/srv/app
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  db:
+    container_name: mongo
+    image: mongo:4.4.5-bionic
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    volumes:
+      - dbdata:/data/db
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+  node_modules:
+  certbot-etc:
+  certbot-var:
+  strapi-app:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /
+      o: bind

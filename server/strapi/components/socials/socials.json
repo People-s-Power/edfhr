@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_socials_socials",
+  "info": {
+    "name": "socials",
+    "icon": "hands-helping"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    <title>Affidavit</title>
+</head>
+
+<style>
+    html,
+    body {
+        font-size: 12px;
+        margin: 10px 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .top-heading h6 {
+        margin: 0;
+    }
+
+    h6 {
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: normal;
+
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+</style>
+
+<body id="draft" class="text-justify container">
+    <div>
+        <div class="top-heading">
+            <div class=" my-3 text-center heading text-uppercase">
+                <h6>
+                    IN THE HIGH COURT OF {{state_arrest}}
+                </h6>
+                <h6>IN THE {{state_arrest}} JUDICIAL DIVISION</h6>
+                <h6>HOLDEN AT {{state_arrest}}</h6>
+            </div>
+            <div class="text-right text-uppercase my-3">
+                SUIT NO:        /FHR/{{year}}
+            </div>
+            <div class="text-justify text-dark text-uppercase">
+                IN THE MATTER OF AN APPLICATION FOR THE ENFORCEMENT OF THE APPLICANT’S
+                FUNDAMENTAL RIGHTS TO RESPECT FOR THE DIGNITY OF HIS PERSON, PERSONAL
+                LIBERTY, RIGHT TO FAIR TRIAL WITHIN A REASONABLE TIME AND FREEDOM OF
+                MOVEMENT.
+            </div>
+            <div class="mt-2 font-weight-bold">BETWEEN</div>
+            <div class="flex justify-content-between text-uppercase">
+                <div>{{name}}</div>
+                <div class="font-weight-bold">APPLICANT</div>
+            </div>
+            <div class="my-2">AND</div>
+            <ol class="text-uppercase">
+                <li>THE ATTORNEY GENERAL, {{state_arrest}}</li>
+                <li>
+                    <Flex>
+                        <div class="flex-1 ">
+                            THE COMMISSIONER OF POLICE, {{state_arrest}}
+                        </div>
+                        <div class="text-uppercase text-bold ">RESPONDENT</div>
+                    </Flex>
+                                     
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="body">
+            <h6 class="text-center my-4" align="center">AFFIDAVIT IN SUPPORT OF THE MOTION ON NOTICE
+            </h6>
+            <p>I, {{affidavit.title}} {{affidavit.name}}, {{affidavit.gender}}, adult,
+                {{affidavit.religion}}, a {{affidavit.occupation}}, now
+                residing at {{affidavit.address}}, citizen of the Federal Republic of Nigeria,
+                do make Oath and state as follows:
+            </p>
+            <ol>
+                <li>
+                    That I am the {{affidavit.rel}} of the Accused/Applicant in this application
+                    by virtue of which I am conversant with the facts leading to the
+                    detention of the applicant.
+
+                </li>
+                <li>
+                    That I have the authority and consent of the Accused/Applicant
+                    to depose to this oath.
+                </li>
+                <li>
+                    That the Applicant told me in the {{arrested_on}} at the
+                    Correctional Center of {state_arraigned}, Nigeria
+                    and I verily believed him.
+                </li>
+                <li>
+                    The Applicant was arrested on the {{arrested_on}}, by
+                    the Nigeria Police Force {arrested_at}, in
+                    {state_arrest} on same date.
+                </li>
+                <li>
+                    All efforts made by me and members of our family to secure the
+                    bail of the Applicant at the station have proved abortive.
+                </li>
+                <li>
+                    That the Accused/Applicant spent {{station_duration}} days in detention at the {applicant.station},
+                    and was
+                    later charged to court at the {{division}} Magistrate Court.
+                </li>
+                <li>
+                    That I know as a fact that from the {{arrested_on}},
+                    when the Applicant was arrested till date, the Nigeria Police
+                    Force should have concluded investigation, if any fact exist of
+                    any crime at all.
+                </li>
+                <li>
+                    That the accused/applicant was charged of {applicant.offence_charged} in {applicant.division}
+                    magistrate court where
+                    the sitting magistrate denied jurisdiction of the said matter. The charge sheet is hereby attached
+                    and marked as
+                    Exhibit A.
+                </li>
+                <li>
+                    That the accused was arrested since the {{arrested_on}}, and
+                    was in police
+                    detention until the {{arraigned_on}}, when he was arraigned
+                    before the lower
+                    court that declined jurisdiction and ordered his remand at the {applicant.state_arraigned}
+                    Correctional Center
+                    pending Director of Public Prosecution’s advice.
+                </li>
+                <li>
+                    That the Director of Public Prosecution works directly under the 1st Respondent.
+                </li>
+                <li>
+                    That plea of the Applicant was not taken at the Magistrate Court on the
+                    {{arraigned_on}}, when he was arraigned.
+                </li>
+                <li>
+                    That from the date of the arrest of the accused person on {{arrested_on}},
+                    till the date of this application, is {{months}} months and an information/proof of
+                    evidence is yet to be
+                    filed against the applicant.
+                </li>
+                <li>
+                    That since then there has been no proof/evidence filed at the high court and the applicant has been
+                    in prison
+                    without trial.
+                </li>
+                <li>That the applicant if granted bail will be available to face his trial whenever called upon to do
+                    so.</li>
+                <li>
+                    That the Applicant informed me in the {{arrested_on}} during
+                    my visit to the
+                    prison that he has reasonable and responsible sureties within the jurisdiction of this honourable
+                    court who are
+                    ready to take him on bail to guarantee his continuous attendance to court to face his trial, if
+                    information is
+                    eventually filed against him.
+                </li>
+                <li>
+                    That he will not interfere with police investigation of the case, if any, when admitted to bail.
+                </li>
+                <li>
+                    That there is no witness whose life will be endangered if the Applicant is admitted to bail.
+                </li>
+                <li>
+                    That i know as a fact that, unless this court admits the Applicant to bail, the respondent will
+                    continue to detain
+                    the Applicant in their unlawful, wrongful, and unconstitutional detention, even when there are
+                    reasonable persons to
+                    take the Applicant on bail.
+                </li>
+                <li>
+                    That the grant of this application will not prejudice the
+                    respondent as the applicant is in no way involved in the crime
+                    for which he is alleged to have committed.
+                </li>
+
+                <li>
+                    That I know as a fact that, unless this court enforces the
+                    Applicant’s Fundamental Right, the respondent will continue to
+                    detain the Applicant in their unlawful, wrongful, and
+                    unconstitutional detention.
+                </li>
+                <li>
+                    That the grant of this application will be in the interest of
+                    justice.
+                </li>
+                <li>
+                    That i swear to this Oath solemnly and conscientiously believing
+                    its contents to be true and correct in accordance with the Oath
+                    Act.
+                </li>
+        </div>
+
+        <div class="footer">
+            <div class="mt-5">
+                Dated this ____________ day of ______________________
+                {{year}}
+            </div>
+            <div class="d-flex justify-content-end">
+                <div>
+                    <div>G.B. EVANS, ESQ</div>
+                    <div>Evans Dule’s Foundation </div>
+                    <div>Solicitor to the Accused/Applicant</div>
+                    <div>No. 163A Okporo Road Port Harcourt,</div>
+                    <div>Rivers State.</div>
+                    <div>Email: evansb45@yahoo.com</div>
+                    <div> 08107639372</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer-left">
+                    <h6>FOR SERVICE ON:</h6>      
+                    <ol>
+                        <li>
+                            <div>Attorney General, {{state_arrest}},</div>
+                            <div>Ministry of Justice ,</div>
+                            <div>Secretariat</div>
+                        </li>
+                        <li>
+                            <div>Commissioner of Police, {{state_arrest}},</div>
+                            <div>{{state_arrest}} Police Command,</div>
+                        </li>
+                    </ol>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

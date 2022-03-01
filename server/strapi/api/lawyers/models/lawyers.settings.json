@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lawyers",
+  "info": {
+    "name": "Lawyers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "socials.socials"
+    }
+  }
+}

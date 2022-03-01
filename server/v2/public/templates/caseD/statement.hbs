@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    <title>Applicant's statement</title>
+</head>
+
+{{!-- 1. Motion on Notice 2. Applicant's statement 3. Affidavit in Support 4. Written address --}}
+
+<style>
+    html,
+    body {
+        font-size: 12px;
+        margin: 10px 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .top-heading h6 {
+        margin: 0;
+    }
+
+    h6 {
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: normal;
+
+    }
+
+
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+</style>
+
+<body id="draft" class="text-justify">
+    <div class="top-heading">
+        <div class=" my-3 text-center heading text-uppercase">
+            <h6>
+                IN THE HIGH COURT OF {{state_arrest}}
+            </h6>
+            <h6>IN THE {{state_arrest}} JUDICIAL DIVISION</h6>
+            <h6>HOLDEN AT {{state_arrest}}</h6>
+        </div>
+        <div class="text-right text-uppercase my-3">
+            SUIT NO:        /FHR/{{year}}
+        </div>
+        <div class="text-justify text-dark text-uppercase">
+            IN THE MATTER OF AN APPLICATION FOR THE ENFORCEMENT OF THE APPLICANT’S
+            FUNDAMENTAL RIGHTS TO RESPECT FOR THE DIGNITY OF HIS PERSON, PERSONAL
+            LIBERTY, RIGHT TO FAIR TRIAL WITHIN A REASONABLE TIME AND FREEDOM OF
+            MOVEMENT.
+        </div>
+        <div class="mt-2 font-weight-bold">BETWEEN</div>
+        <div class="flex justify-content-between text-uppercase">
+            <div>{{name}}</div>
+            <div class="font-weight-bold">APPLICANT</div>
+        </div>
+        <div class="my-2">AND</div>
+        <ol class="text-uppercase">
+            <li>THE ATTORNEY GENERAL, {{state_arrest}}</li>
+            <li>
+                <Flex>
+                    <div class="flex-1 ">
+                        THE COMMISSIONER OF POLICE, {{state_arrest}}
+                    </div>
+                    <div class="text-uppercase text-bold ">RESPONDENT</div>
+                </Flex>
+                                 
+            </li>
+        </ol>
+    </div>
+
+    <div className="body">
+        <ol>
+            <li>
+                <h6>NAME AND DESCRIPTION OF THE APPLICANT</h6>
+                <p>
+                    {{name}} is an indigine of {{lga}} of {{state_origin}}
+                </p>
+            </li>
+            <li>
+                <h6>RELIEFS SOUGHT BY THE APPLICANT</h6>
+
+                <ol>
+                    <li>
+                        A DECLARATION that the continuing detention of the Applicant
+                        since the {{arrested_on}}, till
+                        date without preferring of appropriate charges/information
+                        against the Applicant in the appropriate court of law for his
+                        trial, is wrongful, unlawful, and unconstitutional as it
+                        violates the applicants fundamental rights to respect for the
+                        dignity of his person, personal liberty and Right to fair
+                        trial as guaranteed under Sections 34, 35 and 36 of the
+                        Constitution of the Federal Republic of Nigeria, 1999, as
+                        amended; Article 6,9 and 12 of the African Charter on Human
+                        and People’s Right (Ratification and Enforcement )Act, Cap A9
+                        Laws of the Federation of Nigeria, 2004.
+                    </li>
+                    <li>
+                        <p>
+                            A DECLARATION that the arrest and detention of the Applicant
+                            since the {{arrested_on}} and
+                            who was further taken Magistrate court, for the sole purpose
+                            of being remanded in prison custody on the
+                            {{arraigned_on}} without taken
+                            any further step to prefer any formal charge/information
+                            against the Applicant for his trial in any competent court
+                            till date amounts to a breach of Section 202 of
+                            Administration of Criminal Justice Act and is not known to
+                            our Criminal Law and Jurisprudence.
+                        </p>
+                    </li>
+                    <li>
+                        AN ORDER of the Honourable Court to quash all the charges
+                        against the Applicant and the Remand Order made by the Senior
+                        Magistrate Court in Charge No: {{charge_no}} on the
+                        {{arraigned_on}}, and discharge
+                        the Applicant on the said charge, pending the filing of
+                        appropriate charge or information before a competent court for
+                        his trial or;
+                    </li>
+                    <li>
+                        AN ORDER admitting the Applicant to bail pending the
+                        preferring of a formal charge/information for the trial of the
+                        Applicant.
+                    </li>
+                    <li>
+                        AND for such further or other Order(s) as this Honourable
+                        Court may deem fit to make in the circumstance.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h6>GROUNDS UPON WHICH THE RELIEFS ARE SOUGHT:</h6>
+                <ol>
+                    <li>
+                        <p>
+                            By virtue of section 34(1)(a), 35(1) and (4), 36(1) and (5)
+                            of the Constitution of the Federal Republic of Nigeria,
+                            1999, as amended and Article 3,4,5,6 and 7(b) and (d) of the
+                            African Charter on Human and People’s Right (Ratification
+                            and Enforcement) Act, Cap A9, Laws of the Federation of
+                            Nigeria, 2004, every person is entitled to respect for the
+                            dignity of his person, personal liberty, freedom of movement
+                            , be presumed innocent until proved guilty and tried within
+                            a reasonable time by an impartial court or tribunal over
+                            allegation of crime.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+
+                            The continuing incarceration of the Applicant by the
+                            Respondents since the
+                            {{arrested_on}}, and on the
+                            {{arraigned_on}}, when he was
+                            taken before Magistrate court, till date without filing or
+                            preferring of a formal charge/information against the
+                            Applicant is a violation of the Applicant’s Fundamental
+                            Right as enshrined in the Constitution and it is therefore
+                            unlawful and ultra vires the power of the respondent and
+                            therefore unconstitutional.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No formal charge/Information with proof of evidence has been
+                            filed before the appropriate court to determine the guilt or
+                            otherwise of the Applicant.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            An accused like the Applicant should face early trials, and
+                            where early trial cannot be guaranteed, then he should be
+                            discharged for want of diligent prosecution or released on
+                            bail.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The Applicant’s continuing detention since the
+                            {{arraigned_on}}, by an order
+                            of the magistrate till date without the filling or
+                            preferring of appropriate charge/information  before a
+                            competent court of law, has no legal justification.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The seriousness of an alleged offence was provided to be the
+                            reason for prompt arraignment, which in the instant case,
+                            the Respondents have failed to do so. See the case of
+                            Bolakale V. State (2006) ALL NWLR (PF 962) 507, 519, where
+                            Muntaka-Commaissie, J.C.A held thus: “…it is the seriousness
+                            that should spur the Prosecution to do or perform his
+                            function timorously and properly because the Liberty of a
+                            Nigeria is at stake…”
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <div class="mt-5">
+            Dated this ____________ day of ______________________
+            {{year}}
+        </div>
+        <div class="d-flex justify-content-end">
+            <div>
+                <div>G.B. EVANS, ESQ</div>
+                <div>Evans Dule’s Foundation </div>
+                <div>Solicitor to the Accused/Applicant</div>
+                <div>No. 163A Okporo Road Port Harcourt,</div>
+                <div>Rivers State.</div>
+                <div>Email: evansb45@yahoo.com</div>
+                <div> 08107639372</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="footer-left">
+                <h6>FOR SERVICE ON:</h6>      
+                <ol>
+                    <li>
+                        <div>Attorney General, {{state_arrest}},</div>
+                        <div>Ministry of Justice ,</div>
+                        <div>Secretariat</div>
+                    </li>
+                    <li>
+                        <div>Commissioner of Police, {{state_arrest}},</div>
+                        <div>{{state_arrest}} Police Command,</div>
+                    </li>
+                </ol>
+                      
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

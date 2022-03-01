@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms",
+  "info": {
+    "name": "terms"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "richtext"
+    }
+  }
+}

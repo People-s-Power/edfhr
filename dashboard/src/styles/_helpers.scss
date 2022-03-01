@@ -1,0 +1,58 @@
+.bg-sky {
+  background-color: $sky;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-blue {
+  color: rgb(3, 86, 194);
+}
+
+.fs-inherit {
+  font-size: inherit;
+}
+.fs-small {
+  font-size: 0.8rem;
+}
+.fw-thin {
+  font-weight: 200;
+}
+
+.c-hand {
+  cursor: pointer;
+}
+
+.image-fit {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+span {
+  font-size: inherit;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+.text-right {
+  text-align: right;
+}
+
+.card {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  padding: 0.5rem;
+}
+.text-light-green {
+  color: #02f71a;
+}

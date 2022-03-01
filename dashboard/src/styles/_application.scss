@@ -1,0 +1,13 @@
+.affidavit-form {
+  .form-group {
+    @media screen and (min-width: 920px) {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      .form-control {
+        border-color: $info;
+      }
+    }
+  }
+}

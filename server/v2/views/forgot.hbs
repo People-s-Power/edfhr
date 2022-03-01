@@ -1,0 +1,49 @@
+<style>
+    .container {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+</style>
+
+<div class="forgot-wrapper">
+
+    <div class="container">
+        <form class="forgot-form" method="POST">
+            <h6 class="text-center">Change Password</h6>
+            <input type="text" name="password" placeholder="New password" class="form-control mb-2 rounded-0">
+            <input type="text" name="password2" placeholder="Confirm password" class="form-control mb-2 rounded-0">
+            <div class="text-center">
+                <button class="btn btn-warning rounded-0">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const http = new XMLHttpRequest()
+        const form = document.querySelector(".forgot-form");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const password = e.target.password.value;
+            const password2 = e.target.password2.value;
+            console.log(password, password2);
+            if (password !== password2) {
+                // eslint-disable-next-line no-undef
+                alert("Passwords do not match");
+            } else {
+                const response = await fetch({
+                    url: "forgot/submit",
+                    headers: {
+                        "Content-Type": "applicant/json",
+                    },
+                    method: "post",
+                    body: { password, password2 }
+                })
+                console.log(response)
+            }
+        });
+    </script>
+</div>

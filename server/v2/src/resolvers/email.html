@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title></title>
+
+    <style>
+        .btn {
+            background-color: rgb(18, 95, 18);
+            padding: 0.5rem 1.2rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        a.btn {
+            color: white !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h3.text-center {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div align="center">
+        <img
+            src="http://cdn.mcauto-images-production.sendgrid.net/e7ab598c568d174e/194c06aa-0540-4b9e-835a-db975f35abd8/176x103.png" />
+    </div>
+
+    <div align="center">
+        <h2>Thank you for registering with EDFHR</h2>
+        <p>Click on the link to verify your account or copy the Verification Code below </p>
+        <h3 class="text-center">{{token}}</h3>
+        <a href={{verification_url}} class="btn btn-success">Activate your account</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+@import "./variables";
+@import "bootstrap/scss/bootstrap.scss";
+@import "rsuite/dist/styles/rsuite-default.css";
+@import "./helpers";
+
+*,
+html {
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.btn,
+.form-control,
+.form-select {
+  border-radius: 0;
+}
+
+.split {
+  @media screen and (max-width: 920px) {
+    padding-left: 1rem;
+  }
+  &-main {
+    .inner {
+      @media screen and (min-width: 768px) {
+        display: flex;
+        // grid-template-columns: auto 1fr;
+        .left {
+          padding: 0 0.7rem;
+          width: auto;
+          // background-color: blue;
+        }
+        .right {
+          max-height: 90vh;
+          overflow-y: scroll;
+          flex: 1;
+        }
+      }
+    }
+  }
+  .split-view {
+    max-height: 70vh;
+
+    overflow-y: scroll;
+
+    @media screen and (max-width: 768px) {
+      max-height: 20rem;
+    }
+    @media screen and (min-width: 768px) {
+      min-height: 60vh;
+    }
+    // height: 80%;
+    // background-color: red;
+    // overflow-y: scroll;
+
+    tr {
+      cursor: pointer;
+
+      &:active,
+      &:focus,
+      &.active {
+        background-color: $primary;
+        td,
+        a {
+          color: white;
+        }
+      }
+
+      // &.active {
+      //   background-color: $warning;
+      //   td,
+      //   a {
+      //     color: white;
+      //   }
+      // }
+    }
+  }
+}
+
+.btn-primary {
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

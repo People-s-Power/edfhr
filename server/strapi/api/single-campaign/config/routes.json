@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/single-campaign",
+      "handler": "single-campaign.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/single-campaign",
+      "handler": "single-campaign.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/single-campaign",
+      "handler": "single-campaign.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

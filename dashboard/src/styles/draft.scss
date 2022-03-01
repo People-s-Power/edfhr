@@ -1,0 +1,30 @@
+#draft-page {
+  background-color: gray;
+  padding-top: 2rem;
+  min-height: 100vh;
+  //   font-family: "Times New Roman", Times, serif;
+  font-family: monospace;
+
+  // font-size: 13px;
+  .page {
+    width: 100%;
+    max-width: 297mm;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem 4%;
+    text-align: justify;
+    margin-bottom: 1rem;
+    &-heading {
+      &-intro {
+        font-weight: bold;
+      }
+    }
+    li {
+      margin: 0.8rem 0;
+    }
+  }
+
+  .font-weight-bold {
+    font-weight: 600;
+  }
+}

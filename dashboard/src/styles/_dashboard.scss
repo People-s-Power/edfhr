@@ -1,0 +1,42 @@
+.dashboard {
+  height: 100vh;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+  &-wrapper {
+    display: flex;
+    height: 100%;
+  }
+  .sidebar {
+    width: 12rem;
+    height: inherit;
+    padding-top: 1rem;
+    .nav {
+      &-link {
+        margin-bottom: 1rem;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      max-width: 3rem;
+
+      .nav {
+        &-item {
+          text-align: center;
+        }
+        &-link {
+          padding: 0.45rem;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &-main {
+    // background-color: blue;
+    width: 100%;
+  }
+}

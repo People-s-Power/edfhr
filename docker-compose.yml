@@ -1,0 +1,99 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: ed_frontend
+    image: pin4eva/ed_frontend_v3
+    env_file:
+      - ./frontend/.env
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+      - strapi
+  dashboard:
+    container_name: ed_dashboard
+    image: pin4eva/ed_dashboard_v3
+    env_file:
+      - ./dashboard/.env
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # stdin_open: true
+    environment:
+      - REACT_APP_SERVER_URL=server
+      # - PUBLIC_URL=/v3/admin
+    # command: yarn serve -s build -l 3001
+    command: yarn start:prod
+
+    ports:
+      - 3001:3001
+    depends_on:
+      - server
+  server:
+    container_name: ed_server_v3
+    image: pin4eva/edfhr_server_v3
+    build:
+      context: ./server/v3
+      dockerfile: Dockerfile
+    environment:
+      - DOCKER=true
+    env_file:
+      - ./server/v3/.env
+    # volumes:
+    #   - ./server/v3:/app
+    #   - ./server/v3/node_modules:/app/node_modules
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    command: yarn start:prod
+
+  v2:
+    container_name: ed_v2_server
+    image: pin4eva/edfhr_server_v2
+    build:
+      context: ./server/v2
+      dockerfile: Dockerfile
+    env_file:
+      - ./server/v2/.env
+    restart: unless-stopped
+    ports:
+      - 8002:8002
+
+  strapi:
+    container_name: ed_strapi
+    image: pin4eva/edf_strapi_v3
+    build:
+      context: ./server/strapi
+      dockerfile: Dockerfile
+    env_file:
+      - ./server/strapi/.env
+    # volumes:
+    #   - ./server/strapi:/app
+    # - ./server/strapi/node_modules:/app/node_modules
+    restart: unless-stopped
+    ports:
+      - 8001:8001
+    command: yarn start
+
+  # nginx:
+  #   container_name: ed_nginx
+  #   image: nginx
+  #   restart: "unless-stopped"
+  #   build:
+  #     context: ./nginx
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 80:80
+  #   volumes:
+  #     - ./nginx/default.conf:/etc/nginx/sites-available/default
+  #     - ./letsencrypt:/etc/letsencrypt
+  #   depends_on:
+  #     - frontend
+  #     - server
+  #     - strapi

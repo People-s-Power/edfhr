@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    <title>Applicant's Address</title>
+</head>
+
+{{!-- 1. Motion on Notice 2. Applicant's statement 3. Affidavit in Support 4. Written address --}}
+
+<style>
+    html,
+    body {
+        font-size: 12px;
+        margin: 10px 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .top-heading h6 {
+        margin: 0;
+    }
+
+    h6 {
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: normal;
+
+    }
+</style>
+
+<body id="draft" class="text-justify">
+    <div class="top-heading">
+        <div class=" my-3 text-center heading text-uppercase">
+            <h6>
+                IN THE HIGH COURT OF {{state_arrest}}
+            </h6>
+            <h6>IN THE {{state_arrest}} JUDICIAL DIVISION</h6>
+            <h6>HOLDEN AT {{state_arrest}}</h6>
+        </div>
+        <div class="text-right text-uppercase my-3">
+            SUIT NO:        /FHR/{{year}}
+        </div>
+        <div class="text-justify text-dark text-uppercase">
+            IN THE MATTER OF AN APPLICATION FOR THE ENFORCEMENT OF THE APPLICANT’S
+            FUNDAMENTAL RIGHTS TO RESPECT FOR THE DIGNITY OF HIS PERSON, PERSONAL
+            LIBERTY, RIGHT TO FAIR TRIAL WITHIN A REASONABLE TIME AND FREEDOM OF
+            MOVEMENT.
+        </div>
+        <div class="mt-2 font-weight-bold">BETWEEN</div>
+        <div class="flex justify-content-between text-uppercase">
+            <div>{{name}}</div>
+            <div class="font-weight-bold">APPLICANT</div>
+        </div>
+        <div class="my-2">AND</div>
+        <ol class="text-uppercase">
+            <li>THE ATTORNEY GENERAL, {{state_arrest}}</li>
+            <li>
+                <Flex>
+                    <div class="flex-1 ">
+                        THE COMMISSIONER OF POLICE, {{state_arrest}}
+                    </div>
+                    <div class="text-uppercase text-bold ">RESPONDENT</div>
+                </Flex>
+                                 
+            </li>
+        </ol>
+    </div>
+
+    <div className="body">
+        <h6 className="text-center" align="center">
+            WRITTEN ADDRESS IN SUPPORT OF THE INSTANT APPLICATION
+        </h6>
+        <p>
+            This is a written address of Counsel for the Accused/Applicant. The
+            said written address accompanies a Motion on Notice brought pursuant
+            to Sections 35(4) and 36 of the Constitution of the Federal Republic
+            of Nigeria 1999 (as amended) and under the inherent jurisdiction of
+            the Honourable Court. The motion prays the Honourable Court for the
+            following:
+        </p>
+        <h6>
+            AN ORDER ADMITTING THE ACCUSED/APPLICANT, {{name}} TO BAIL PLENDING
+            TRIAL.
+        </h6>
+        <p>
+            And for such order or further orders as the Honourable Court may
+            deem fit to make in the circumstance.
+        </p>
+        <p>
+            In support of the motion is a 22 paragraphs affidavit sworn to by
+            the Accused/Applicant. Attached to the said affidavit are two
+            Exhibits A & B. We place reliance on all the paragraphs of the
+            affidavit. In determination of this application, My Lord the issue
+            for determination is:
+        </p>
+        <h6>
+            Whether the Accused/Applicant is entitled to be admitted to bail
+            pending trial by a Court of Competent Jurisdiction.
+        </h6>
+        <h6>ARGUMENT</h6>
+        <p>
+            My Lord, it is trite law that bail is a right before conviction
+            unless there are special reasons to refuse it. A person who has not
+            been found guilty of an offence is prima facie entitled to his
+            liberty. Once he has been convicted by a Competent Court and
+            sentenced to a term of imprisonment he is prima facie deprived of
+            that entitlement and the opposite becomes the case. Before
+            conviction, there is presumption of innocence. May I refer Your
+            Lordship to the case of Adamu Muri v. Inspector General of Police
+            (1957) N.R.N.L.R 5 at page 6.
+        </p>
+        <p>
+            My Lord, the Accused/Applicant is a Nigerian citizen and was
+            arrested in {{arrested_on}} by the
+            police and was in police detention until
+            {{arrested_on}}, when he was
+            arraigned at the Magistrate Court {{division}} before his Worship and
+            jurisdiction was declined by the lower court for want of
+            jurisdiction and until the filing of this motion, the respondent has
+            filed no information/proof of evidence let alone to commence the
+            prosecution of this case. This I humbly submit amount to special and
+            exceptional circumstance likely to keep the applicant incarcerated
+            ad-in-finitum entitling the applicant to bail. For this, I refer My
+            Lord to the following cases:
+        </p>
+        <ul>
+            <li>
+                <h6>
+                    Musa v. C.O.P (2004) 9 NWLR (pt. 879) p. 483 at 486 (ratio 4)
+                </h6>
+            </li>
+            <li>
+                <h6>Anakwe vs. C.O.P (1996) 3 NWLR (pt. 436) p. 320 at 331,</h6>
+                <p>
+
+                    where the Court held that: “where the prosecutor parades to the
+                    court the word ‘robbery’… as in the instant case without trying
+                    the accused with the offence, the court of law is bound to grant
+                    bail and that the only way to initiate criminal proceeding is to
+                    proffer an information/proof of evidence substantial enough to
+                    show that there is a prima facie evidence of commission of the
+                    offence against the accused”. This the respondent has not done.
+                </p>
+            </li>
+        </ul>
+        <p>
+            To this end, Ogbuagu J.C.A (as he then was) in the case of Musa Vs.
+            C.O.P (2014) 9 NWLR (pt. 879) p. 483 ratio 2, held:
+        </p>
+        <p className="pl-3 font-italic">
+            “The failure of the respondent to produce or exhibit the said proof
+            of evidence in my view is , or amounts to a special and exceptional
+            circumstance for me to exercise my discretion in favour of the
+            applicant”.
+        </p>
+        <p>
+            My Lord, Section 35(4) of the Constitution of the Federal Republic
+            of Nigeria 1999 (as amended) states as follows:
+        </p>
+        <p>
+            “Any person who is arrested or detained in accordance with
+            subsection 1(c) of the section shall be brought before a court of
+            law within a reasonable time, and if he is not tried within a period
+            of:
+        </p>
+        <div className="pl-3">
+            <p>
+                A.
+                <span>
+                    Two months from the date of his arrest or detention, in the case
+                    of a person who is in custody or is not entitled to bail; or
+                </span>
+            </p>
+            <p>
+                B.
+                <span>
+                    Three months from the date of his arrest of detention, in the
+                    case of a person who has been released on bail, he shall
+                    (without prejudice to further proceedings that may be brought
+                    against him) be released unconditionally or upon such conditions
+                    as are reasonably necessary to ensures he appears for trial at a
+                    later date”.
+                </span>
+            </p>
+        </div>
+        <p>
+            My Lord, the Accused/Applicant was arrested since
+            {{arrested_on}} and was in police
+            detention until
+            {{arraigned_on}} when he was
+            arraigned before the lower court that declined jurisdiction and
+            ordered his remand at the Correctional Center pending Director of
+            Public Prosecution’s advice. From the date of the arrest of the
+            accused person in {{arrested_on}} till
+            the filing of this application, it is {{months}} months and
+            an information/proof of evidence is yet to be filed against the
+            applicant. On this note, the Applicant is entitled to bail My Lord.
+            This is the position of the Court of Appeal in the case of Fajana
+            Eddi vs. C.O.P (2007) All FWLR (pt. 367) 960.
+        </p>
+        <p>
+            My Lord, the grant or refusal of the application for bail is at the
+            discretion of this Honourable Court. The decision to grant or refuse
+            application for bail depends entirely on the exercise of the
+            discretion of the Learned Trial Judge having regards to the material
+            placed before him in the affidavit in support of the application.
+            May I refer Your Lordship to the case of Likitta vs. C.O.P (2002)
+            All FWLR (pt. 106) 1075.
+        </p>
+        <p>
+            Again, we urge My Lord to take critical look at the arraignment of
+            the Applicant at the Lower Court as shown in the Affidavit in
+            support of the motion paper. The accused/ Applicant did not take
+            plea before the lower Court because the Court lacks jurisdiction to
+            try the case. The Magistrate ordered that the applicant be remanded
+            in prison custody. Flow from the above, we urge Your Lordship to
+            exercise this discretion judicially and judiciously in favour of the
+            applicant. The law is that bail should not be refused as a
+            punishment and that justice delayed is justice denied. See Dogo vs.
+            C.O.P (1988) 1. NCR 14. Courts are enjoined to approach the question
+            of bail liberally, see Musa vs. COP (200) 8 NWLR (pt. 879) 583;
+            Danbaba vs. State (2000) 14 NWLR (pt. 687) 396.
+        </p>
+        <p>
+            Over the years the Appellate Courts have set out considerations that
+            will weigh in the mind of the Court in the consideration of bail.
+            Some of the conditions are stated in Bamiyi vs. The State (2001) 8
+            NWLR (pt. 715) at p. 276. In the instant case, the Accused/Applicant
+            shall abide by them all. The Applicant will come to trial whenever
+            called upon to do so. See paragraph 14 of the affidavit in support
+            of this motion.
+        </p>
+        <p>
+            It is my humble submission that by Section 36(5) of the Constitution
+            of the Federal Republic of Nigeria 1999 (as amended), an accused
+            person standing trial is presumed innocent. See the case of J.A Orji
+            & 5 Ors vs. F.R.N (2007) 13 NWLR (pt. 1050) 55 at 88 para. D-F and
+            94-95, Para. E-G.
+        </p>
+        <p>
+            On the whole therefore, I humbly urge Your Lordship to grant bail to
+            the Accused/Applicant in the most lenient terms.
+        </p>
+        <p>May it please this Honourable Court.</p>
+    </div>
+
+    <div class="footer">
+        <div class="mt-5">
+            Dated this ____________ day of ______________________
+            {{year}}
+        </div>
+        <div class="d-flex justify-content-end">
+            <div>
+                <div>G.B. EVANS, ESQ</div>
+                <div>Evans Dule’s Foundation </div>
+                <div>Solicitor to the Accused/Applicant</div>
+                <div>No. 163A Okporo Road Port Harcourt,</div>
+                <div>Rivers State.</div>
+                <div>Email: evansb45@yahoo.com</div>
+                <div> 08107639372</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="footer-left">
+                <h6>FOR SERVICE ON:</h6>      
+                <ol>
+                    <li>
+                        <div>Attorney General, {{state_arrest}},</div>
+                        <div>Ministry of Justice ,</div>
+                        <div>Secretariat</div>
+                    </li>
+                    <li>
+                        <div>Commissioner of Police, {{state_arrest}},</div>
+                        <div>{{state_arrest}} Police Command,</div>
+                    </li>
+                </ol>
+                      
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

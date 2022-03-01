@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "about",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "who_we_are": {
+      "type": "richtext"
+    },
+    "vision": {
+      "type": "text"
+    },
+    "goal": {
+      "type": "text"
+    },
+    "what_we_do": {
+      "type": "richtext"
+    },
+    "what_we_do_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

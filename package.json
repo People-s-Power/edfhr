@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-styled-components": "^1.13.2"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
+}
