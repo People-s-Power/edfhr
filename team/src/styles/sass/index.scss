@@ -1,0 +1,44 @@
+// Fonts
+@import "./variables";
+@import "fonts/roboto";
+
+// third party
+
+@import "../../../node_modules/animate.css/animate.css";
+
+@import "./mixins";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./layout";
+@import "./helpers";
+@import "./sidenav";
+@import "./home";
+@import "./settings";
+@import "./reports";
+@import "./user";
+@import "./login";
+@import "./draft.scss";
+
+@import "~rsuite/dist/styles/rsuite-default.css";
+@import "/nprogress.css";
+
+.more-icon {
+  .dropdown-menu {
+    li {
+      @extend .dropdown-item;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+img {
+  width: 100%;
+}

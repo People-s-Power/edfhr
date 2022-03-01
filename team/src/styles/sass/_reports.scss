@@ -1,0 +1,121 @@
+#reports {
+  .inner {
+    display: grid;
+    gap: 4px;
+    // height: 100vh;
+    // overflow: scroll;
+
+    @include media-md-up {
+      grid-template-columns: 25% 25% 50%;
+      // grid-template-columns: 50% 50%;
+    }
+
+    @include media-md {
+      grid-template-columns: 50% 50%;
+    }
+
+    @include media-sm {
+      .first {
+        grid-column: 1 / span 4;
+      }
+
+      .second {
+        grid-column: 1 / span 4;
+      }
+
+      .third {
+        grid-column: 1 / span 4;
+      }
+    }
+
+    .first {
+      //   position: fixed;
+      overflow-y: scroll;
+      height: 100vmax;
+
+      @include media-sm {
+        max-height: 20rem;
+      }
+
+      .user-list {
+        margin-bottom: 0.5rem;
+
+        p {
+          margin: 0;
+
+          &.name {
+            font-weight: 500;
+          }
+        }
+
+        &_small {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.8em;
+          @extend .text-muted;
+
+          .count {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            background-color: $link;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $light;
+          }
+        }
+      }
+    }
+
+    .second {
+      @extend .first;
+      height: auto;
+    }
+
+    .third {
+      // background-color: orange;
+      // .card {
+      //     height: 100%;
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: space-between;
+      // }
+
+      @include media-md {
+        grid-column: 1 / span 4;
+        max-width: 100%;
+      }
+
+      @include media-down {
+        grid-column: 1 / span 4;
+      }
+    }
+  }
+
+  .reply-report {
+    position: relative;
+
+    .my-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      color: $light;
+      background-color: $link;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      @include transition;
+
+      // cursor: pointer;
+      &:hover {
+        background-color: darken($link, 10);
+      }
+    }
+  }
+}

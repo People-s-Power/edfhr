@@ -1,0 +1,148 @@
+// $grid-count: (1,2,3,4,5,6);
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.text-link {
+    color: $link;
+}
+.bg-link{
+    background-color: $link;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.fs-16 {
+    font-size: 1.1428em;
+}
+
+.fs-18 {
+    font-size: 1.2em;
+}
+
+.heading {
+    @extend h5;
+    margin: 1rem 0;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.theme-card {
+    @include theme-card;
+    border: none;
+    padding: 1rem;
+
+    &.hover {
+
+
+        &:hover {
+            @include theme-hover;
+        }
+    }
+}
+
+.card {
+    // @extend .theme-card;
+    border: none;
+    padding: 0.5rem;
+}
+
+@for $i from 1 through 6 {
+    .grid-#{$i} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        gap: 0.5rem;
+
+        @if $i>3 {
+            @include media-md {
+                grid-template-columns: repeat($i - 2, 1fr);
+            }
+        }
+
+        @include media-down {
+            grid-template-columns: auto;
+        }
+
+        // @media (max-width:$sm) {
+        //     grid-template-columns: auto;
+        // }
+    }
+}
+
+// d-flex justify-content-between align-items-center my-3
+
+.middle-bar {
+    margin: 1rem 0;
+
+    .btns {
+        @extend .mb-2,
+        .mb-md-0;
+    }
+
+    @include media-up {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+}
+
+.rs-modal-body {
+    overflow-x: visible !important;
+    // position: relative;
+    // margin-top: 30px;
+    // padding-bottom: 30px;
+    // height: 100%;
+}
+
+.search-wrapper {
+    /* border: 1px solid gray; */
+    width: 100%;
+    max-width: 300px;
+    @extend .form-control;
+    display: flex;
+    align-items: center;
+
+    input {
+        border: none;
+        padding: 0.5 1rem;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.mde-text {
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.c-hand {
+    cursor: pointer;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.text-inherit {
+    color: inherit;
+}
