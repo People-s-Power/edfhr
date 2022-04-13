@@ -70,15 +70,11 @@ export class Campaign {
   @Prop({
     type: [{ type: Types.ObjectId, ref: 'View', autopopulate: true }],
   })
-  views: ViewDocument[];
+  views: any[];
 }
 
 @Schema()
 export class View {
-  @Prop()
-  sessionId: string;
-  @Prop()
-  country: string;
   @Prop({ type: Types.ObjectId, ref: 'User' })
   user: UserDocument;
 }

@@ -15,14 +15,11 @@ type Campaign {
   endorsements: [Endorsement]
   likes: [String]
   promoted: Boolean
-  views: [View]
+  views: [String]
 }
 
 type View {
-  id: ID
-  user: User
-  country: String
-  sessionId: String
+  user: String
 }
 
 type CampaignNotice {

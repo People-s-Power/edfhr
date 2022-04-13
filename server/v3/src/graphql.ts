@@ -351,14 +351,11 @@ export interface Campaign {
     endorsements?: Nullable<Nullable<Endorsement>[]>;
     likes?: Nullable<Nullable<string>[]>;
     promoted?: Nullable<boolean>;
-    views?: Nullable<Nullable<View>[]>;
+    views?: Nullable<Nullable<string>[]>;
 }
 
 export interface View {
-    id?: Nullable<string>;
-    user?: Nullable<User>;
-    country?: Nullable<string>;
-    sessionId?: Nullable<string>;
+    user?: Nullable<string>;
 }
 
 export interface CampaignNotice {

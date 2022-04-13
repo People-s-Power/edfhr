@@ -84,4 +84,18 @@ export class CampaignController {
   async approveCampaign(@Body() data: { campaign_id: string }) {
     return await this.campaignService.approveCampaign(data.campaign_id);
   }
+  
+  @Put('/viewCamp/:id')
+  async viewCamp(
+    @Param('id') id: string,
+    @Body() data: { userId: string; }
+    ): Promise<string> {
+    const userId = data.userId
+    const result = await this.campaignService.viewedBy(
+      id,
+      userId
+    )
+
+    return result;
+  }
 }

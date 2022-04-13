@@ -44,8 +44,8 @@ import { JwtStrategy, SessionSerializer } from './strategies/jwt.strategy';
   controllers: [AuthController],
   exports: [JwtStrategy, PassportModule, AuthService],
 })
-export class AuthModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LocationMiddleware).forRoutes(AuthController);
-  }
+export class AuthModule {
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(LocationMiddleware).forRoutes(AuthController);
+  // }
 }

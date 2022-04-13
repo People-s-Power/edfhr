@@ -8,12 +8,12 @@ import { Connection, Model, ObjectId } from 'mongoose';
 import { IGeo } from 'src/interfaces';
 import { Notice, NoticeDocument } from 'src/notification/notification.schema';
 import { ISession } from 'src/typings';
-import { UserDocument } from 'src/user/entity/user.schema';
+import { User, UserDocument } from 'src/user/entity/user.schema';
 import { cloudinaryUpload } from 'src/utils/cloudinary';
 import { CreateCampaignDTO, UpdateCampaignDTO } from '../dto/campaign.dto';
 import { CampaignStatusEnum } from '../dto/campaign.interface';
 import { CampaignGateway } from '../gateway/campaign.gateway';
-import { Campaign, CampaignDocument } from '../schema/campaign.schema';
+import { Campaign, CampaignDocument, View, ViewDocument } from '../schema/campaign.schema';
 import { Endorsement } from '../schema/endorsement.schema';
 
 export class ISessionResponseData {
@@ -24,6 +24,9 @@ export class ISessionResponseData {
 @Injectable()
 export class CampaignService {
   constructor(
+    @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
+    @InjectModel(View.name)
+    private viewModel: Model<ViewDocument>,
     @InjectModel(Campaign.name)
     private readonly campaignModel: Model<CampaignDocument>,
     @InjectModel(Endorsement.name)
@@ -235,6 +238,32 @@ export class CampaignService {
       );
       return campaign;
     } catch (error) {
+      throw error;
+    }
+  }
+  async viewedBy(
+    id: string,
+    userId: string,
+  ): Promise<string> {
+    try {
+      const campaign = await this.campaignModel.findById(id);
+      const user = await this.userModel.findById(userId)
+      if(!campaign || !user) throw new Error('Not found')
+
+      const data = {
+        sessionId: 'session.id',
+        country: 'session.location.country_name',
+        user: userId,
+      }
+
+      if(campaign.views.includes(userId)) return 'Viewed'
+
+      campaign.views.push(userId)
+      campaign.save()
+      // console.log(campaign)
+      return 'Viewer Added';
+    } catch (error) {
+      console.log(error)
       throw error;
     }
   }
