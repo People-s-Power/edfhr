@@ -8,7 +8,7 @@ import {
 import { GET_ACTIVE_CAMPAIGNS } from "apollo/queries/campaignQuery";
 import CampaignBanner from "components/campaign-comp/CampaignBanner";
 import CampCard from "components/home/CampCard";
-import LegalReprensentatives from "components/home/Representatives";
+// import LegalReprensentatives from "components/home/Representatives";
 import Indexsvg from "components/icon/Indexsvg";
 import Slider from "components/Slider";
 import gql from "graphql-tag";
@@ -54,8 +54,6 @@ interface HomeProps {
 
 const HomePage: NextPage<HomeProps> = ({
 	campaigns,
-	reps,
-	lawyers,
 	campaignBanner,
 	testimonies,
 }: HomeProps): JSX.Element => {
@@ -164,38 +162,7 @@ const HomePage: NextPage<HomeProps> = ({
 					campaignBanner={campaignBanner as Strapi_Single_Campaign}
 				/>
 
-				<section className="represntatives py-5">
-					<div className="_represntatives container m-c">
-						<p className="mb-5 fs-3 fw-bold text-center  ">
-							Our legal representatives
-						</p>
-						<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 mb-4 g-4 rep-cards">
-							{lawyers?.slice(0, 4)?.map((lawyer, i) => (
-								<LegalReprensentatives key={i} lawyer={lawyer} />
-							))}
-						</div>
-						{lawyers && lawyers?.length > 3 && (
-							<Link href="/lawyers">
-								<a className="btn btn-warning text-light">See More...</a>
-							</Link>
-						)}
-					</div>
-				</section>
-				<section className="represntatives py-5">
-					<div className="_represntatives container m-c">
-						<p className="mb-5 fs-3 fw-bold text-center  ">Our State Reps</p>
-						<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 mb-4 g-4 rep-cards">
-							{reps?.slice(0, 4)?.map((lawyer, i) => (
-								<LegalReprensentatives key={i} lawyer={lawyer} />
-							))}
-						</div>
-						{reps && reps?.length > 3 && (
-							<Link href="/reps">
-								<a className="btn btn-warning text-light">See More...</a>
-							</Link>
-						)}
-					</div>
-				</section>
+	
 				<section className="py-5 community-saying">
 					<div className="_community-saying container">
 						<p className="text-center mb-5 fs-1 fw-bold">
@@ -280,13 +247,13 @@ const secondRowContent = [
 		img: "donor.svg",
 		text1: "Report",
 		text2: "Human Right Abuse",
-		link: "https://login.flowtrack.co/admin/contacts/form_edit/6w8xnf",
+		link: "https://app.flowtrack.co/form/vaf5v8",
 	},
 	{
 		img: "Bulls eye.svg",
 		text1: "Become",
 		text2: "A Staff",
-		link: "https://portal.edfhr.org",
+		link: "https://team.edfhr.org/",
 	},
 ];
 

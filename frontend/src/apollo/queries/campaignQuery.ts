@@ -83,11 +83,7 @@ export const MY_CAMPAIGN = gql`
 			status
 			slug
 			promoted
-			views {
-				id
-				sessionId
-				country
-			}
+			views
 			endorsements {
 				__typename
 			}

@@ -9,6 +9,7 @@ const Header = (): JSX.Element => {
 	const [menu, setMenu] = useState(false);
 	const user = useRecoilValue(UserAtom);
 	const { pathname } = useRouter();
+	const text = `PEOPLE'S POWER`
 
 	return (
 		<header>
@@ -17,7 +18,8 @@ const Header = (): JSX.Element => {
 					<div className="navbar-brand d-flex justify-content-between align-items-center justify-content-md-start min">
 						<Link href="/">
 							<a className="navbar-brand">
-								<img src="/images/ed foundation 2.png" alt="" loading="lazy" />
+								<img src="/images/logo.svg" alt="" loading="lazy" />
+							<h6>{ text }</h6>
 							</a>
 						</Link>
 						<menu

@@ -3,10 +3,10 @@ require("dotenv").config();
 const axios = require("axios");
 
 // const SERVER_URL = process.env.SERVER_URL;
-const STRAPI_URL =
-    process.env.NODE_ENV === "production" ?
-    "https://cms.edfhr.org" :
-    "http://localhost:8001";
+const STRAPI_URL = "https://cms.edfhr.org"
+    // process.env.NODE_ENV === "production" ?
+    // "https://cms.edfhr.org"
+    // "http://localhost:8001";
 
 const meta = async() => {
     try {

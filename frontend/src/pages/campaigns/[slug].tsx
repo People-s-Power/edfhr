@@ -6,6 +6,7 @@ import {
 	GET_CAMPAIGNS,
 	GET_ENDORSEMENTS_BY_CAMPAIGN,
 } from "apollo/queries/campaignQuery";
+import axios from "axios";
 import { UserAtom } from "atoms/UserAtom";
 import LoginModal from "components/auth/login/modal/LoginModal";
 import { CampaignShareMenuList } from "components/campaign-comp/CampaignTable";
@@ -55,12 +56,22 @@ const SingleCampaignPage: NextPage<{ camp: ICampaign }> = ({
 		console.log("handlike");
 	};
 
+	const viewCamp = async () => {
+		if(!user) return
+		const data = {
+			userId: user?.id
+		}
+		const res = await axios.put(`/campaign/viewCamp/${camp?.id}`, data)
+		console.log(res)
+	}
+
 	useEffect(() => {
 		if (camp?.likes?.includes(user?.id)) {
 			setIsLiked(true);
 		} else {
 			setIsLiked(false);
 		}
+		viewCamp()
 	}, [camp, user]);
 
 	// useEffect(() => {
@@ -136,7 +147,7 @@ const SingleCampaignPage: NextPage<{ camp: ICampaign }> = ({
 											className="btn m-0 my-4 btn-warning text-white fw-bold px-4 py-2 rounded-pill"
 											onClick={() => setShowLogin(true)}
 										>
-											Login to endorse campaign
+											Endorse campaign
 										</button>
 									)}
 									{showEndorsement && <EndorseCampaignComp camp={camp} />}

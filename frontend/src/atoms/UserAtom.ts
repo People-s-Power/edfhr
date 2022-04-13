@@ -6,10 +6,10 @@ export const UserAtom = atom({
 	default: null as unknown as Partial<IUser>,
 });
 
-export const UsersAtom = atom({
-	key: "UsersAtom",
-	default: [],
-});
+// export const UsersAtom = atom({
+// 	key: "UsersAtom",
+// 	default: [],
+// });
 
 export const UserCampaignAtom = atom({
 	key: "UserCamp",

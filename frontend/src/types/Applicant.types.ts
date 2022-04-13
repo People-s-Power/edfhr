@@ -17,6 +17,10 @@ export enum AccountTypeEnum {
 	Contact = "Contact",
 }
 
+export interface ViewerType {
+	id: number; country: string;
+}
+
 export interface IUser extends Document {
 	name: string;
 	accountType: AccountTypeEnum;
