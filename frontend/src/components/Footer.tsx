@@ -40,7 +40,7 @@ const Footer = (): JSX.Element => {
 							<ul className=" ">
 								<li className="mb-4 fs-4 fw-bold text-center">About us</li>
 								<li className="">
-									<strong>EDForum</strong> is a web-based technology for those
+									<strong>{`PEOPLE'S POWER`}</strong> is a web-based technology for those
 									facing Social injustice and Human Right abuse. It is created
 									to inspire people to cause a change in their local
 									communities. The forum enables one or group to launch a
@@ -69,6 +69,11 @@ const Footer = (): JSX.Element => {
 								<li className="nav-item">
 									<Link href="https://portal.edfhr.org">
 										<a className="nav-link">ED Foundation</a>
+									</Link>
+								</li>
+								<li className="nav-item">
+									<Link href="/reps">
+										<a className="nav-link">Our Team</a>
 									</Link>
 								</li>
 							</ul>
@@ -115,7 +120,7 @@ const Footer = (): JSX.Element => {
 					|
 					<Link href="/">
 						<a>
-							&nbsp; &copy;{new Date().getFullYear()} ED Forum, All rights
+							&nbsp; &copy;{new Date().getFullYear()} {`PEOPLE'S POWER`}, All rights
 							reserved.
 						</a>
 					</Link>

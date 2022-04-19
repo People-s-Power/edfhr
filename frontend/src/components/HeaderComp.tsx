@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import UserMenu from "./user-profile/UserMenu";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
 
 const Header = (): JSX.Element => {
 	const [menu, setMenu] = useState(false);
@@ -58,7 +60,17 @@ const Header = (): JSX.Element => {
 									</button>
 								</Link>
 							) : (
-								<UserMenu />
+								<div className='flex'>
+									{
+									// Work to be done !!
+									// When users click they should see updates
+								}
+									<div className='notify-bell bg-white shadow-lg'>
+										<FontAwesomeIcon icon={faBell} />
+									</div>
+									<div className='p-1'></div>
+									<UserMenu />
+								</div>
 							)}
 						</li>
 					</ul>

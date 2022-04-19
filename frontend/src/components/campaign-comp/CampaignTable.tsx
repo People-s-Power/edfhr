@@ -24,6 +24,8 @@ const CampaignTable = (): JSX.Element => {
 							<th>All Campaigns</th>
 							<th>Date Created</th>
 							<th> Status </th>
+							<th> Promotion amount  </th>
+							<th> Promotion target  </th>
 							<th> Views </th>
 							<th> Endorsements </th>
 							<th> Action </th>
@@ -81,12 +83,19 @@ const SingleRow = ({ camp }: { camp: ICampaign }) => {
 				></i>
 				{/* {camp.status} */}
 			</td>
+			<td> 0 </td>
+			<td> 0 </td>
 			<td> {camp?.views?.length} </td>
 			<td> {Number(camp?.endorsements?.length) + 1} </td>
 
 			<td>
 				<Link href={`/promote?slug=${camp?.slug}`}>
 					<a className="btn p-0">{camp?.promoted ? "Upgrade" : "Promote"}</a>
+				</Link>
+			</td>
+			<td>
+				<Link href={`/promote?slug=${camp?.slug}`}>
+					<a className="btn p-0">Edit</a>
 				</Link>
 			</td>
 

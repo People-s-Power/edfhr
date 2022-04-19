@@ -33,6 +33,7 @@ export interface ICampaign extends Document {
   createdAt: Date;
   updatedAt: Date;
   addedFrom: string;
+  category: string;
   endorsements: IEndorsement[];
   endorsementCount: number;
   likes: string[];

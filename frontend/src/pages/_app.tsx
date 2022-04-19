@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 					name="keywords"
 					content="human right, activist, campaign, Nigeria"
 				/>
-				<title>ED Forum</title>
+				<title>{`PEOPLE'S POWER`}</title>
 				<meta
 					name="description"
 					content="Evans Dule’s Foundation (EDFoundation), is a non-governmental organization formed in 2015 with the sole aim of addressing the causes of criminality and advancing the cause of human rights, the Foundation has between June 2017 till date defended over 500 Fundamental Right Matters of people whose fundamental right has been."

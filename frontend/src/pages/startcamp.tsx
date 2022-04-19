@@ -66,7 +66,7 @@ const camps = [
 	{ name: "Human Right awareness", img: "camp6" },
 	{ name: "Social Policy", img: "camp5" },
 	{ name: "Criminal Justice", img: "camp9" },
-	{ name: "Human Right Preceeding", img: "camp9" },
+	{ name: "Human Right Preceeding", img: "camp90" },
 	{ name: `Rehabilitation/ Empowerment`, img: "camp3" },
 	{ name: "Environment", img: "camp7" },
 	{ name: "Health", img: "camp8" },
@@ -82,7 +82,7 @@ const CategoryItem = ({ camp }: { camp: { name: string; img: string } }) => {
 		<div className="camp-card col my-4">
 			<div className="card main-camp-card h-100 bg-transparent  border-0">
 				<img
-					src={`images/${camp.img}.png`}
+					src={`images/${camp.img}.svg`}
 					alt=""
 					className="card-img d-block mb-2 mx-auto"
 				/>

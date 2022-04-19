@@ -55,6 +55,8 @@ export class Campaign {
   updatedAt: Date;
   @Prop()
   addedFrom: string;
+  @Prop()
+  category: string;
   @Prop({
     type: [{ type: Types.ObjectId, ref: 'Endorsement', autopopulate: true }],
   })
